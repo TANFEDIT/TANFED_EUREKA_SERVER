@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy JAR file (make sure you build with mvn or gradle before deploy)
-COPY eureka-server-0.0.1-SNAPSHOT.jar app.jar
+COPY target/eureka-server-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose port (Render sets PORT env var dynamically, so we don’t hardcode it)
 EXPOSE 8050
